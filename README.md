@@ -11,7 +11,7 @@ This repository is the official implementation of our ICML 2025 paper [Synthetic
   - [Evaluation](#evaluation)
   - [Bugs or Questions?](#bugs-or-questions)
   - [Citation](#citation)
-  - [Acknowledgments](#acknowledgments)
+  - [Acknowledgements](#acknowledgements)
 
 
 ## Install Requirements
@@ -29,8 +29,7 @@ Coming soon
 
 ## Evaluation
 ```bash
-cd math_eval
-bash eval_finetuned.sh /path/to/your/model
+Coming soon
 ```
 
 ## Bugs or Questions?
@@ -48,5 +47,5 @@ Please cite our paper if you find the repo helpful in your work:
 }
 ```
 
-## Acknowledgments
+## Acknowledgements
 The structure of this repository is largely based on the official implementation of [lamp](https://github.com/eth-sri/lamp) and [Addax](https://github.com/optimization-for-data-driven-science/Addax). We are grateful for their open sources.
