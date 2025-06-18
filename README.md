@@ -6,9 +6,8 @@ This repository is the official implementation of our ICML 2025 paper [Synthetic
 - [GRADMM](#gradmm)
   - [🔗 Quick Links](#-quick-links)
   - [Install Requirements](#install-requirements)
-  - [Data Preparation](#data-preparation)
-  - [Data Generation Pipeline](#data-generation-pipeline)
-  - [Evaluation](#evaluation)
+  - [Data Generation](#data-generation)
+  - [Finetuning](#finetuning)
   - [Bugs or Questions?](#bugs-or-questions)
   - [Citation](#citation)
   - [Acknowledgements](#acknowledgements)
@@ -16,21 +15,30 @@ This repository is the official implementation of our ICML 2025 paper [Synthetic
 
 ## Install Requirements
 ```bash
-Coming soon
+conda create -n gradmm python=3.11
+conda activate gradmm
+pip install -r requirements.txt
 ```
 
-## Data Preparation
-Coming soon
-
-## Data Generation Pipeline
+## Data Generation
 ```bash
-Coming soon
+cd gradmm
+./scripts/admm.sh
+./scripts/admm_dp.sh
 ```
 
-## Evaluation
+For filtering, please refer to the notebook `gradmm/Filtering.ipynb`. Adjust the settings in the `Parameters` section, then run all cells in the notebook.
+
+## Finetuning
+1. Obtain the synthetic data paths by running the `Print fine-tuning paths` section in the notebook `gradmm/Finetuning.ipynb`.
+
+2. Insert the retrieved paths into `scripts/query_ft.sh`, then run the following commands:
 ```bash
-Coming soon
+cd addax
+./scripts/query_ft.sh
 ```
+
+3. To collect the fine-tuning results, paste the fine-tuning paths into `Collect fine-tuning results` section in the notebook `gradmm/Finetuning.ipynb` and un the corresponding cells.
 
 ## Bugs or Questions?
 If you have any questions related to the code or the paper, feel free to email Dang Nguyen (nguyentuanhaidang@gmail.com). If you encounter any problems when using the code, or want to report a bug, you can open an issue. Please try to specify the problem with details so we can help you better and quicker!

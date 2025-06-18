@@ -1,0 +1,15 @@
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+peft
+datasets
+scikit-learn 
+absl-py
+nltk
+rouge_score
+wandb
+tqdm
+jupyterlab
+ipywidgets
